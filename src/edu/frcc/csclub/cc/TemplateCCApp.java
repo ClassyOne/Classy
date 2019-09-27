@@ -34,10 +34,13 @@ public class TemplateCCApp extends CCApp {
 		// e.g. 
 		xPoints = new int[NUM_POINTS];
  		yPoints = new int[NUM_POINTS];
-		int x = getRandom().nextInt(WIDTH);
- 		int y = getRandom().nextInt(HEIGHT);
+		
  		getGfx().setColor(Color.GREEN);
- 		getGfx().fillOval(x, y, 10, 10);
+ 		for (int i = 0; i < NUM_POINTS; ++i) {
+ 			int x = xPoints[i];
+ 			int y = yPoints[i];
+ 			getGfx().fillOval(x, y, 10, 10);
+ 		}
 	}
 
 	public static void main(String[] args) {
