@@ -5,7 +5,10 @@ import java.awt.Color;
 public class TemplateCCApp extends CCApp {
 	private static final int WIDTH = 800;
 	private static final int HEIGHT = 500;
+	private static final int NUM_POINTS = 50;
 
+ 	private int[] xPoints;
+ 	private int[] yPoints;
 	public TemplateCCApp() {
 		super("Template CCApp", WIDTH, HEIGHT);
 		// WARNING: Do not call getGfx() here.  It will break.
@@ -29,7 +32,8 @@ public class TemplateCCApp extends CCApp {
 	public void paint() {
 		// TODO Draw your application here.
 		// e.g. 
-		
+		xPoints = new int[NUM_POINTS];
+ 		yPoints = new int[NUM_POINTS];
 		int x = getRandom().nextInt(WIDTH);
  		int y = getRandom().nextInt(HEIGHT);
  		getGfx().setColor(Color.GREEN);
